@@ -1,6 +1,6 @@
 {
   "name": "ninelives-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "commit": "npx git-cz",
@@ -12,7 +12,7 @@
   },
   "author": "@9-lives",
   "bin": {
-    "ninelives-cli create": "bin/ninelives-create.js"
+    "ninelives-cli create": "bin/create.js"
   },
   "browserslist": [
     "last 3 version",
