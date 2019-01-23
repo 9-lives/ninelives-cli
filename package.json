@@ -6,13 +6,9 @@
     "commit": "npx git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/9-lives/ninelives-cli.git"
-  },
   "author": "@9-lives",
   "bin": {
-    "ninelives-cli create": "bin/create.js"
+    "ninelives create": "bin/create.js"
   },
   "browserslist": [
     "last 3 version",
@@ -25,21 +21,25 @@
   "bugs": {
     "url": "https://github.com/9-lives/ninelives-cli/issues"
   },
-  "homepage": "https://github.com/9-lives/ninelives-cli#readme",
-  "devDependencies": {
-    "commitizen": "^3.0.5",
-    "cz-conventional-changelog": "^2.1.0"
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
   },
+  "dependencies": {
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0"
+  },
   "engines": {
     "node": "> 8.0.0",
     "npm": "> 5.2.0"
   },
-  "dependencies": {
-    "commander": "^2.19.0"
+  "homepage": "https://github.com/9-lives/ninelives-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9-lives/ninelives-cli.git"
   }
 }
