@@ -1,6 +1,6 @@
 {
   "name": "ninelives-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "scripts": {
     "commit": "npx git-cz",
@@ -8,15 +8,8 @@
   },
   "author": "@9-lives",
   "bin": {
-    "ninelives create": "bin/create.js"
+    "ninelives": "bin/cli.js"
   },
-  "browserslist": [
-    "last 3 version",
-    "> 1%",
-    "not ie < 10",
-    "not ios < 9",
-    "not dead"
-  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/9-lives/ninelives-cli/issues"
