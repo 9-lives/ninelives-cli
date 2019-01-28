@@ -12,33 +12,27 @@ function create () {
     .option('--vue', 'clone vue-template')
     .option('--webpack', 'clone webpack-template')
     .action(options => {
-      const tmpl = getTmplInfo(options)
+      const url = getRepoURL(options)
 
-      execSync(`git clone ${tmpl.url}`)
-      rmDir(`./${tmpl.dirName}/.git`)
+      execSync(`git clone ${url}`)
+      rmDir(`./${str.substring(str.lastIndexOf('/') + 1, str.lastIndexOf('.'))}/.git`)
     })
 
   /**
-   * 根据参数获取模板信息
+   * 根据参数取仓库地址
    */
-  function getTmplInfo ({ vue, webpack }) {
-    let tmpl
+  function getRepoURL ({ vue, webpack }) {
+    let url
 
     if (vue) {
-      tmpl = {
-        dirName: 'vue-template',
-        url: `https://github.com/9-lives/vue-template.git`
-      }
+      url = `https://github.com/9-lives/vue-template.git`
     } else if (webpack) {
-      tmpl = {
-        dirName: 'webpack-template',
-        url: `https://github.com/9-lives/webpack-template.git`
-      }
+      url = `https://github.com/9-lives/webpack-template.git`
     } else {
       throw new Error('invalid arguments')
     }
 
-    return tmpl
+    return url
   }
 }
 
